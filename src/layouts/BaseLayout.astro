@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = "Mahfuz Bin Minhaz — Software Engineer and Competitive Programmer.",
+  description = "Mahfuz Bin Minhaz — Competitive Programmer | Cybersecurity Expert.",
 } = Astro.props;
 ---
 
@@ -21,12 +21,11 @@ const {
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title} | Mahfuz Bin Minhaz</title>
   </head>
 
   <body>
-    <Navbar />
     <slot />
-    <Footer />
   </body>
 </html>
