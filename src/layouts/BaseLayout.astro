@@ -1,0 +1,32 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "Mahfuz Bin Minhaz — Software Engineer and Competitive Programmer.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Mahfuz Bin Minhaz</title>
+  </head>
+
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>

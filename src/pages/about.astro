@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { site, skills } from "../data/site";
+---
+
+<BaseLayout title="About" description={site.description}>
+  <main class="container page-shell page-intro">
+    <SectionHeading
+      eyebrow="About"
+      title="I enjoy building software that is useful, clear, and easy to improve"
+      description="My work blends engineering discipline with product thinking. I like turning rough ideas into meaningful systems and polishing them until the experience feels intentional."
+    />
+
+    <div class="meta-grid">
+      <article class="card">
+        <h3>What I value</h3>
+        <ul class="list-stack">
+          <li>Strong fundamentals before clever shortcuts.</li>
+          <li>Readable systems that age well as features grow.</li>
+          <li>Simple interfaces that make workflows feel lighter.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Current focus</h3>
+        <ul class="list-stack">
+          <li>Frontend experiences with maintainable structure.</li>
+          <li>Competitive programming and algorithmic thinking.</li>
+          <li>Building reliable, product-oriented prototypes.</li>
+        </ul>
+      </article>
+    </div>
+
+    <section class="section">
+      <SectionHeading
+        eyebrow="Tools"
+        title="Core skills"
+        description="The goal is not to collect everything, but to build depth where it matters."
+      />
+
+      <div class="chip-row">
+        {skills.map((skill) => <span class="chip">{skill}</span>)}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

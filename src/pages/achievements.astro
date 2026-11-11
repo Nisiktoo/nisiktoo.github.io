@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { site, achievements } from "../data/site";
+---
+
+<BaseLayout title="Achievements" description={site.description}>
+  <main class="container page-shell page-intro">
+    <SectionHeading
+      eyebrow="Achievements"
+      title="Progress built through learning, execution, and iteration"
+      description="The most meaningful achievements are often the ones that compound over time through consistent practice and better decision-making."
+    />
+
+    <div class="grid-3" style="margin-top: 2rem;">
+      {achievements.map((item) => (
+        <article class="card">
+          <span class="badge">Milestone</span>
+          <h3>{item.title}</h3>
+          <p>{item.detail}</p>
+        </article>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

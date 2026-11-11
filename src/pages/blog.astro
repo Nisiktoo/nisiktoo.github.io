@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { site, blogPosts } from "../data/site";
+---
+
+<BaseLayout title="Blog" description={site.description}>
+  <main class="container page-shell page-intro">
+    <SectionHeading
+      eyebrow="Blog"
+      title="Notes from the workbench"
+      description="Short reflections on engineering decisions, learning loops, and building systems that stay flexible over time."
+    />
+
+    <div class="article-list" style="margin-top: 2rem;">
+      {blogPosts.map((post) => (
+        <article class="card article-card">
+          <span class="badge">Article</span>
+          <h3>{post.title}</h3>
+          <p>{post.excerpt}</p>
+          <a href={post.href} class="text-link">Read more</a>
+        </article>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

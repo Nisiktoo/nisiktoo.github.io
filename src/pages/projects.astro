@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { site, featuredProjects } from "../data/site";
+---
+
+<BaseLayout title="Projects" description={site.description}>
+  <main class="container page-shell page-intro">
+    <SectionHeading
+      eyebrow="Projects"
+      title="A few ideas shaped into practical prototypes"
+      description="I like projects that balance technical depth, clear structure, and user value. The best prototypes are the ones you can continue building without reworking everything."
+    />
+
+    <div class="grid-3" style="margin-top: 2rem;">
+      {featuredProjects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </main>
+</BaseLayout>
