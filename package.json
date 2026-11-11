@@ -1,5 +1,5 @@
 {
-  "name": "tmp",
+  "name": "nisiktoo-portfolio",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -13,5 +13,6 @@
   },
   "dependencies": {
     "astro": "^7.4.11"
-  }
+  },
+  "packageManager": "pnpm@12.18.0"
 }
