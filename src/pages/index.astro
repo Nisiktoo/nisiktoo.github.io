@@ -1,16 +1,17 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import SectionHeading from "../components/SectionHeading.astro";
+// import SectionHeading from "../components/SectionHeading.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import { site, skills, featuredProjects, achievements, blogPosts } from "../data/site";
+import HeroHeading from "../components/HeroHeading.astro";
 ---
 
 <BaseLayout title="Home" description={site.description}>
   <main class="container page-shell">
-    <SectionHeading
+
+    <HeroHeading
       eyebrow="Hi, I'm Mahfuz Bin Minhaz"
       title="I'm a competitive programmer, software engineer, cybersecurity novice, and a lot of other things."
-      description="My work blends engineering discipline with product thinking. I like turning rough ideas into meaningful systems and polishing them until the experience feels intentional."
     />
 
   </main>
